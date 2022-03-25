@@ -15,7 +15,11 @@ You need to download the Selenium WebDriver, you want to test with (Chrome, Fire
 
 Remember to make the WebDriver folder available in your Windows Path system variable, so Selenium can call it.
 
-Sample (ChromeDriver)
-> System.setProperty("webdriver.chrome.driver", "C:\\...\\chromedriver.exe");
+Setting WebDriver
+> System.setProperty("webdriver.chrome.driver", "<folder>/chromedriver.exe");
+> System.setProperty("webdriver.gecko.driver", "<folder>/geckodriver.exe");
+> System.setProperty("webdriver.edge.driver",<folder>/msedgedriver.exe");
+
+> 
 
 
