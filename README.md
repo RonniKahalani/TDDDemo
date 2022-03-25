@@ -16,6 +16,6 @@ You need to download the Selenium WebDriver, you want to test with (Chrome, Fire
 Remember to make the WebDriver folder available in your Windows Path system variable, so Selenium can call it.
 
 Sample (ChromeDriver)
-![image](https://user-images.githubusercontent.com/8819076/160161793-9b969779-6900-45d5-85e3-f69103b460b9.png)
+> System.setProperty("webdriver.chrome.driver", "C:\\Users\\JKAH\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 
