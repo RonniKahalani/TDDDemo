@@ -21,7 +21,7 @@ You need to download the Selenium WebDriver, you want to test with
 
 [You find all downloads here](https://www.selenium.dev/downloads/).
 
-Remember to make the WebDriver folder available in your Windows Path system variable, so Selenium can call it.
+Remember to make your new WebDriver available in your program, using a System Property, so Selenium can call it. See below.
 
 Sample (ChromeDriver)
 > System.setProperty("webdriver.chrome.driver", "C:\\...\\chromedriver.exe");
