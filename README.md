@@ -19,7 +19,6 @@ Setting WebDriver
 > System.setProperty("webdriver.chrome.driver", "<folder>/chromedriver.exe");
 > System.setProperty("webdriver.gecko.driver", "<folder>/geckodriver.exe");
 > System.setProperty("webdriver.edge.driver",<folder>/msedgedriver.exe");
+> System.setProperty("webdriver.ie.driver", "<folder>/IEDriverServer.exe"); 
 
-> 
-
-
+Safari does not need this webdriver setting.
