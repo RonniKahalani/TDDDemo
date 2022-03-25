@@ -11,7 +11,15 @@ This code also contains a few Selenium UI test sample.
 
 NOTE:
 
-You need to download the Selenium WebDriver, you want to test with (Chrome, Firefox, Safari, Edge...). [You find the downloads here](https://www.selenium.dev/downloads/).
+You need to download the Selenium WebDriver, you want to test with 
+- [Chrome](https://chromedriver.chromium.org/)
+- [Firefox](https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html)
+- [Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari)
+- [Internet Explorer](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration)
+- [Edge](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)
+- [Opera](https://github.com/operasoftware/operachromiumdriver/releases)
+
+[You find all downloads here](https://www.selenium.dev/downloads/).
 
 Remember to make the WebDriver folder available in your Windows Path system variable, so Selenium can call it.
 
