@@ -7,7 +7,7 @@ This is a small TDD sample, building a headless calculator taking numbers via a 
 ---
 
 ## Selenium Web UI Testing
-This code also contains a few Selenium UI test sample.
+This code also contains a few Selenium UI test samples.
 
 NOTE:
 
