@@ -1,14 +1,16 @@
 package com.example.selenium;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-import java.util.Locale;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SeleniumTest {
@@ -22,9 +24,7 @@ public class SeleniumTest {
      */
     @BeforeAll
     public void openBrowser(){
-        System.setProperty("webdriver.chrome.driver",
-                "C:\\Users\\JKAH\\Downloads\\chromedriver_win32\\chromedriver.exe");
-
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
@@ -58,13 +58,11 @@ public class SeleniumTest {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
-        System.out.println(driver.getCurrentUrl());
         WebElement addButton = driver.findElement(By.xpath("//button[text()='Add to cart']"));
         addButton.click();
 
         String items = driver.findElement(By.xpath("//span[@class='shopping_cart_badge']")).getText();
 
-        System.out.println(items);
         Assert.assertTrue( "1".equals(items));
     }
 
