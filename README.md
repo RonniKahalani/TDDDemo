@@ -23,10 +23,16 @@ You need to download the Selenium WebDriver, you want to test with
 
 Remember to make the WebDriver folder available in your Windows Path system variable, so Selenium can call it.
 
-Setting WebDriver on Windows
+### Setting WebDriver on Windows
+#### Chrome
 > System.setProperty("webdriver.chrome.driver", "<folder>/chromedriver.exe");
+#### Firefox
 > System.setProperty("webdriver.gecko.driver", "<folder>/geckodriver.exe");
+#### Edge
 > System.setProperty("webdriver.edge.driver",<folder>/msedgedriver.exe");
+#### IE
 > System.setProperty("webdriver.ie.driver", "<folder>/IEDriverServer.exe");
+#### Opera
 > System.setProperty("webdriver.opera.driver", "<folder>/operadriver.exe");
+
 Safari does not need this webdriver setting.
