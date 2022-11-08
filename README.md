@@ -11,4 +11,7 @@ This project also contains a few Selenium UI test samples.
 [See Code](https://github.com/RonniKahalani/TDDDemo/tree/master/src/test/java/com/example/selenium)
 
 There are 2 different Selenium tests
-- http://the-internet.herokuapp.com/add_remove_elements/
+- Tests clicking the Add button twice, should create two elements that has a specific CSS class:
+-- http://the-internet.herokuapp.com/add_remove_elements/
+- Tests that a login redirects to the shopping catalog, and add a product to the shopping basket end with the basket having 1 added:
+-- https://www.saucedemo.com/
