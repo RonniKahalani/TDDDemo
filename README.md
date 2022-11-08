@@ -9,3 +9,6 @@ This is a small TDD sample, building a headless calculator taking numbers via a 
 ## Selenium Web UI Testing
 This project also contains a few Selenium UI test samples.
 [See Code](https://github.com/RonniKahalani/TDDDemo/tree/master/src/test/java/com/example/selenium)
+
+There are 2 different Selenium tests
+- http://the-internet.herokuapp.com/add_remove_elements/
