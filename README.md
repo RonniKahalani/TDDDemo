@@ -13,4 +13,4 @@ This project also contains a few Selenium UI test samples.
 
 There are 2 different Selenium tests
 - Tests clicking the Add button twice, should create two elements that has a specific CSS class, at http://the-internet.herokuapp.com/add_remove_elements/
-- Tests that a login redirects to the shopping catalog, and add a product to the shopping basket end with the basket having 1 added, at https://www.saucedemo.com/
+- Tests that a login redirects to the product catalog, and adds a product to the shoppingcart, which should then have 1 product, at https://www.saucedemo.com/
