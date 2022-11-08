@@ -1,7 +1,5 @@
 package com.example.calculator;
 
-import com.example.test.category.UnitTests;
-import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInstance;
@@ -15,7 +13,6 @@ import static org.junit.jupiter.api.TestInstance.*;
 import static org.mockito.Mockito.when;
 
 @TestInstance(Lifecycle.PER_CLASS)
-@Category(UnitTests.class)
 public class CalculatorTest {
 
     @Mock
@@ -25,11 +22,13 @@ public class CalculatorTest {
 
     @BeforeAll
     public void beforeAll() {
+
         MockitoAnnotations.openMocks(this);
     }
 
     @BeforeEach
     public void beforeEach() {
+
         cut = new Calculator(numberSource);
     }
 
