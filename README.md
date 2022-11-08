@@ -2,7 +2,7 @@
 ## The step by step tutorial.
 This is a small TDD sample, building a headless calculator taking numbers via a number source interface, which is mocked via Mockito.
 
-[TDD Tutorial](doc/TDD-Tutorial.pdf).
+[Download TDD Tutorial](https://github.com/RonniKahalani/TDDDemo/raw/master/doc/TDD-Tutorial.docx).
 
 ---
 
