@@ -23,8 +23,7 @@ import java.time.LocalDate;
 public class SeleniumTest {
 
     private static ChromeDriver driver;
-    private WebElement element;
-
+    
     /**
      * Opens the driver browser.
      * Is done once, before all the tests run.
