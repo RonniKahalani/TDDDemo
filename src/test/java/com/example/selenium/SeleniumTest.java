@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
@@ -22,7 +22,7 @@ import java.time.LocalDate;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SeleniumTest {
 
-    private static ChromeDriver driver;
+    private static FirefoxDriver driver;
     
     /**
      * Opens the driver browser.
@@ -30,8 +30,8 @@ public class SeleniumTest {
      */
     @BeforeAll
     public void openBrowser(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
@@ -61,8 +61,8 @@ public class SeleniumTest {
 
         driver.get("https://www.saucedemo.com/");
 
-        driver.findElement(By.id("user-name")).sendKeys("standard_user\t");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce\t");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
