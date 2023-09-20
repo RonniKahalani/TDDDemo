@@ -7,10 +7,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -18,6 +15,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.concurrent.TimeUnit;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SeleniumTest {
@@ -39,7 +37,7 @@ public class SeleniumTest {
      * Tests a UI interface, by pushing an add button twice, asserting two new objects with a special class attribute.
      */
     @Test
-    public void chrome_Elements_AddAdd_ReturnsTwo(){
+    public void firefox_Elements_AddAdd_ReturnsTwo(){
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
 
         WebElement addButton = driver.findElement(By.xpath("//button[text()='Add Element']"));
@@ -57,7 +55,7 @@ public class SeleniumTest {
      * Tests a web shop by adding the first product to the shopping cart, asserting a product in the cart.
      */
     @Test
-    public void chrome_ShoppingCart_AddFirstProduct_ReturnsOneInCart(){
+    public void firefox_ShoppingCart_AddFirstProduct_ReturnsOneInCart(){
 
         driver.get("https://www.saucedemo.com/");
 
