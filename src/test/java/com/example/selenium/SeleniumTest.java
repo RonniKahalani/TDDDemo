@@ -74,6 +74,26 @@ public class SeleniumTest {
         Assert.assertTrue( "1".equals(items));
     }
 
+    /**
+     * Tests finding Hitchhikers Guide To The Galaxy on saxo.com.
+     */
+    @Test
+    public void firefox_ShoppingCart_SearchHitchHikersGuide_ReturnsAResult(){
+
+        driver.get("https://www.saxo.com/");
+
+        driver.findElement(By.id("CybotCookiebotDialogBodyButtonDecline")).click();
+        driver.findElement(By.id("new-search-query")).sendKeys("Hitchhikers guide to the galaxy");
+        driver.findElement(By.className("search-form")).submit();
+        WebElement anchor = driver.findElement(By.xpath("//a[starts-with(@title,'The Hitchhiker')]"));
+
+
+
+        saveScreenshot(driver, "selenium-shoppingcart-" + LocalDate.now() +".png");
+
+        Assert.assertTrue( !anchor.equals(null));
+    }
+
     private void saveScreenshot(RemoteWebDriver driver, String fileName) {
         File s = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
