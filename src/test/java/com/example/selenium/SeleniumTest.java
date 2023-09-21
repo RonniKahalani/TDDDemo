@@ -75,7 +75,7 @@ public class SeleniumTest {
     }
 
     /**
-     * Tests finding Hitchhikers Guide To The Galaxy on saxo.com.
+     * Tests finding Hitchhiker's Guide To The Galaxy at saxo.com.
      */
     @Test
     public void firefox_ShoppingCart_SearchHitchHikersGuide_ReturnsAResult(){
@@ -83,13 +83,12 @@ public class SeleniumTest {
         driver.get("https://www.saxo.com/");
 
         driver.findElement(By.id("CybotCookiebotDialogBodyButtonDecline")).click();
+
         driver.findElement(By.id("new-search-query")).sendKeys("Hitchhikers guide to the galaxy");
         driver.findElement(By.className("search-form")).submit();
         WebElement anchor = driver.findElement(By.xpath("//a[starts-with(@title,'The Hitchhiker')]"));
 
-
-
-        saveScreenshot(driver, "selenium-shoppingcart-" + LocalDate.now() +".png");
+        saveScreenshot(driver, "selenium-hitchhikers-guide-" + LocalDate.now() +".png");
 
         Assert.assertTrue( !anchor.equals(null));
     }
